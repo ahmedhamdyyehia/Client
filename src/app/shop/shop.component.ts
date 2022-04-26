@@ -64,15 +64,15 @@ export class ShopComponent implements OnInit {
     });
   }
 
-  onBrandSelected(brandId:number)
+  onBrandSelected(brandId:any)
   {
-    this.shopParams.brandId = brandId;
+    this.shopParams.brandId = Number(brandId.value);
     this.getProducts();
   }
 
-  onTypeSelected(typeId:number)
+  onTypeSelected(typeId:any)
   {
-    this.shopParams.typeId = typeId;
+    this.shopParams.typeId = Number(typeId.value);
     this.getProducts();
   }
 
@@ -101,7 +101,4 @@ export class ShopComponent implements OnInit {
     this.shopParams = new ShopParams();
     this.getProducts();
   }
-
-
-
 }
