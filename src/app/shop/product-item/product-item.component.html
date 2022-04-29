@@ -18,10 +18,15 @@
     <div class="card h-100 shadow-sm">
         <img class="card-img-top img-fluid w-100" src="{{this.product.pictureUrl}}">
         <div class="card-body">
-            <h6><b>{{this.product.name}}</b></h6>
+            <h6 >
+                <b>
+                    <a routerLink="/shop/{{this.product.id}}">{{this.product.name}}</a>
+                </b>
+            </h6>
             <div class="d-flex flex-row my-2">
                 <div class="text-muted">{{product.price | currency}}</div>
                 <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
-            </div> <button class="btn w-100 rounded my-2">Add to cart</button>
+            </div> 
+            <button class="btn w-100 rounded my-2">Add to cart</button>
         </div>
     </div>
